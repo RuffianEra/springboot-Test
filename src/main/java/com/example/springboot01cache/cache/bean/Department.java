@@ -1,4 +1,4 @@
-package com.example.springboot01cache.cachea.bean;
+package com.example.springboot01cache.cache.bean;
 
 public class Department {
 	

@@ -1,6 +1,8 @@
-package com.example.springboot01cache.cachea.bean;
+package com.example.springboot01cache.cache.bean;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements Serializable {
 	private Integer id;
 	private String lastName;
 	private String email;

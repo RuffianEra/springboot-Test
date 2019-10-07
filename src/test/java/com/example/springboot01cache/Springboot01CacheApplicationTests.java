@@ -1,6 +1,6 @@
 package com.example.springboot01cache;
 
-import com.example.springboot01cache.cachea.mapper.EmployeeMapper;
+import com.example.springboot01cache.cache.mapper.EmployeeMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,12 +11,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class Springboot01CacheApplicationTests {
 
+    /* 数据库实体类 */
     @Autowired()
     EmployeeMapper employeeMapper;
-
     @Test
-    public void contextLoads() {
-        System.out.println(employeeMapper.getEmployeeById(1));
+    public void mybatisTest(){
+        System.out.println(employeeMapper.getEmployeeById(2));
     }
+
+    /* 缓存测试 */
+    //@Autowired
+
+
+
 
 }
