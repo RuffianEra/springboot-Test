@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 
-@MapperScan("com.example.springboot01cache.cachea.mapper")
+@MapperScan("com.example.springboot01cache.cache.mapper")
 @EnableCaching
 @SpringBootApplication
 public class Springboot01CacheApplication {

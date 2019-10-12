@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 @Mapper
+/* 表明该类是数据访问层 */
 @Repository
 public interface EmployeeMapper {
 

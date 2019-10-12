@@ -3,6 +3,8 @@ package com.example.springboot01cache.cache.controller;
 import com.example.springboot01cache.cache.bean.Employee;
 import com.example.springboot01cache.cache.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.cache.RedisCache;
+import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,5 +28,17 @@ public class EmployeeController {
     @RequestMapping("/delAmp")
     public void getEmployee99(){
         employeeService.delectAmp();
+    }
+
+
+    @Autowired
+    RedisCacheManager redisCacheManager;
+    @RequestMapping("/test")
+    public void test(){
+        for (String name:redisCacheManager.getCacheNames()){
+            System.out.println(name);
+        }
+        RedisCache redisCache = (RedisCache) redisCacheManager.getCache("amp");
+        System.out.println(redisCache.get("amp::getAmpById_1"));
     }
 }
